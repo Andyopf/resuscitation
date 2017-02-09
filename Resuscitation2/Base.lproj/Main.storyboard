@@ -868,15 +868,14 @@
                                     <segue destination="44m-h2-lWF" kind="show" id="X8J-J4-Zbh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CPR Inteval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-Za-LTf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CPR Inteval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-Za-LTf">
                                 <rect key="frame" x="16" y="92" width="151" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiX-fs-bSJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiX-fs-bSJ">
                                 <rect key="frame" x="213" y="92" width="91" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -889,13 +888,6 @@
                                     <action selector="CPRPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="GbV-xb-5DQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-lz-D1e">
-                                <rect key="frame" x="16" y="274" width="288" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-GS-GYf">
                                 <rect key="frame" x="48" y="200" width="221" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -907,10 +899,10 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goReset" id="MTR-xf-Lgw"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-OA-alW">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-OA-alW">
                                 <rect key="frame" x="16" y="144" width="288" height="213"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUE-Jn-Z45" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUE-Jn-Z45" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
                                         <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -922,7 +914,7 @@
                                             <action selector="vfBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="Eaz-DB-qXF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-6O-O7w" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-6O-O7w" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="288" height="42"/>
                                         <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -934,7 +926,7 @@
                                             <action selector="pvtBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="GQn-30-vMt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNq-2b-TwA" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNq-2b-TwA" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="288" height="42"/>
                                         <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -946,7 +938,7 @@
                                             <action selector="aystoleBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="dsV-O5-s2R"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-HU-PTw" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-HU-PTw" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="171" width="288" height="42"/>
                                         <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -960,24 +952,47 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Ei-bTL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Ei-bTL">
                                 <rect key="frame" x="24" y="444" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="EPI"/>
+                                <connections>
+                                    <action selector="epinepAdministered:" destination="htE-xB-9gY" eventType="touchUpInside" id="9Tt-Bt-PiE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-d5-2co">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-d5-2co">
                                 <rect key="frame" x="262" y="444" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="AMIO"/>
+                                <connections>
+                                    <action selector="cordaroneAdministered:" destination="htE-xB-9gY" eventType="touchUpInside" id="qKK-ld-Jnq"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-lz-D1e">
+                                <rect key="frame" x="16" y="274" width="288" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nWq-OA-alW" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leadingMargin" id="0V5-c4-rAj"/>
                             <constraint firstItem="nWq-OA-alW" firstAttribute="top" secondItem="3Kc-Za-LTf" secondAttribute="bottom" constant="8" id="Buo-Uc-PVI"/>
+                            <constraint firstItem="qiX-fs-bSJ" firstAttribute="top" secondItem="IA3-qz-UTa" secondAttribute="bottom" constant="8" id="C5Q-Oc-B5e"/>
+                            <constraint firstItem="nWq-OA-alW" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leadingMargin" id="GZH-ds-bro"/>
+                            <constraint firstItem="jLB-d5-2co" firstAttribute="height" secondItem="5n1-Ei-bTL" secondAttribute="height" id="KYF-CF-OGy"/>
+                            <constraint firstItem="nWq-OA-alW" firstAttribute="trailing" secondItem="rBe-t7-mgC" secondAttribute="trailingMargin" id="Lkb-9E-vjn"/>
                             <constraint firstItem="IA3-qz-UTa" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leading" id="MlC-0S-Hzf"/>
+                            <constraint firstItem="rPR-dM-sh7" firstAttribute="top" secondItem="jLB-d5-2co" secondAttribute="bottom" constant="94" id="QPl-IZ-2A1"/>
+                            <constraint firstItem="3Kc-Za-LTf" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leading" constant="16" id="SrE-aA-8wb"/>
+                            <constraint firstItem="rPR-dM-sh7" firstAttribute="top" secondItem="5n1-Ei-bTL" secondAttribute="bottom" constant="94" id="Tc8-ai-Qcp"/>
+                            <constraint firstItem="5n1-Ei-bTL" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leadingMargin" constant="8" id="cVW-6F-4IK"/>
+                            <constraint firstItem="3Kc-Za-LTf" firstAttribute="top" secondItem="IA3-qz-UTa" secondAttribute="bottom" constant="8" id="che-ni-9Eu"/>
+                            <constraint firstItem="qiX-fs-bSJ" firstAttribute="trailing" secondItem="rBe-t7-mgC" secondAttribute="trailingMargin" id="duc-0y-AAX"/>
                             <constraint firstItem="IA3-qz-UTa" firstAttribute="top" secondItem="rBe-t7-mgC" secondAttribute="top" id="hs1-Sr-81k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jLB-d5-2co" secondAttribute="trailing" constant="4" id="igH-eZ-gN7"/>
                             <constraint firstAttribute="trailing" secondItem="IA3-qz-UTa" secondAttribute="trailing" id="igO-1l-Ggk"/>
+                            <constraint firstItem="nWq-OA-alW" firstAttribute="top" secondItem="qiX-fs-bSJ" secondAttribute="bottom" constant="8" id="lf1-qf-i7g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nWq-OA-alW" secondAttribute="trailing" id="p6X-6h-sOX"/>
                         </constraints>
                     </view>
@@ -1011,9 +1026,9 @@
         <image name="cpr" width="960" height="888"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZyC-qg-zAK"/>
         <segue reference="t90-hc-atn"/>
         <segue reference="X8J-J4-Zbh"/>
+        <segue reference="ZyC-qg-zAK"/>
         <segue reference="oJh-f2-6je"/>
     </inferredMetricsTieBreakers>
 </document>

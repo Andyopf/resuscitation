@@ -9,21 +9,24 @@
 import UIKit
 import AVFoundation
 
+
+
 class RhythmVC1: UIViewController {
+    
 
     @IBOutlet weak var CPRTimer: UILabel!
     @IBOutlet weak var cprBtn: UIButton!
     @IBOutlet weak var startCPRLbl: UILabel!
     
     var CPRTime = 12345
-    var cprInterval = 120
+    var cprInterval = 10
     var now = NSDate()
     var showDatePattern = DateFormatter()
     var convertedDate: String = ""
     var timer1: Timer!
     var timer2: Timer!
     
-    var medtronome: AVAudioPlayer!
+    var backgroundMusicPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,22 +34,27 @@ class RhythmVC1: UIViewController {
         totalCPRTime()
         showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
         convertedDate = showDatePattern.string(from: now as Date)
+        playMetronome()
         
-        do {
-            let resourcePath1 = Bundle.main.path(forResource: "100bpm", ofType: "mp3")
-            //            let resourcePath = NSBundle.mainBundle().pathForResource("100bpm"", ofType: "mp3")!
-            let url = NSURL(fileURLWithPath: resourcePath1!)
-            try medtronome = AVAudioPlayer(contentsOf: url as URL)
-            
-            medtronome.prepareToPlay()
-            medtronome.play()
-        } catch let err as NSError {
-            print(err.debugDescription)
-        }
         
     }
     
     // functions
+    
+    func playMetronome() {
+        do {
+            let resourcePath1 = Bundle.main.path(forResource: "100bpm", ofType: "mp3")
+            //            let resourcePath = NSBundle.mainBundle().pathForResource("100bpm"", ofType: "mp3")!
+            let url = NSURL(fileURLWithPath: resourcePath1!)
+            try backgroundMusicPlayer = AVAudioPlayer(contentsOf: url as URL)
+            
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+
+    }
     
     func totalCPRTime() {
         timer1 = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RhythmVC1.cumulativeCPR), userInfo: nil, repeats: true)
@@ -124,7 +132,6 @@ class RhythmVC1: UIViewController {
         cprCountDown()
         cprBtn.isHidden = true
         startCPRLbl.isHidden = true
-
     }
 
 

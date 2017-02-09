@@ -7,11 +7,7 @@
 //
 
 import UIKit
-
-//protocol controlsAudio {
-//    func startAudio()
-//    func stopAudio()
-//}
+import AVFoundation
 
 class VFpVT: UIViewController {
     
@@ -37,13 +33,13 @@ class VFpVT: UIViewController {
     var CPRTime = 12345
     var CPRInterval = 120
     var timeOfVT = 0
+    var countAmio = 0
     var myTimer1: Timer!
     var myTimer2: Timer!
     var myTimer3: Timer!
     var now = NSDate()
     var showDatePattern = DateFormatter()
     var convertedDate: String = ""
-    var medtronomePlay: RhythmVC1 = RhythmVC1()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +54,7 @@ class VFpVT: UIViewController {
         ecgDisappear()
         checkRhythmLbl.isHidden = true
         CPRBtn.isHidden = true
+        
         
     }
     
@@ -100,7 +97,7 @@ class VFpVT: UIViewController {
         } else if CPRInterval == 0 {
             checkRhythmLbl.isHidden = false
             _ = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(VFpVT.checkEcg), userInfo: nil, repeats: false)
-            CPRInterval = 120
+            CPRInterval = 10
             ecgAppear()
             epinephrineBtn.isHidden = true
             defibrillationBtn.isHidden = true
@@ -157,16 +154,22 @@ class VFpVT: UIViewController {
         
     }
     
+    // ECG buttons
+    
     @IBAction func vfBtnPressed(_ sender: Any) {
         CPRBtn.isHidden = false
         let post = Post(drugPath: "VF", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
+        ecgDisappear()
+        defibrillationBtn.isHidden = false
     }
     
     @IBAction func pvtBtnPressed(_ sender: Any) {
         CPRBtn.isHidden = false
         let post = Post(drugPath: "pVT", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
+        ecgDisappear()
+        defibrillationBtn.isHidden = false
     }
     
     @IBAction func peaBtnPressed(_ sender: Any) {
@@ -175,6 +178,24 @@ class VFpVT: UIViewController {
     @IBAction func aystoleBtnPressed(_ sender:Any) {
         vtToAyst()
     }
+    // CPR drugs buttons
+    
+    @IBAction func epinepAdministered(_ sender: Any) {
+        let post = Post(drugPath: "Epinephrine 1 mg", timePath: convertedDate)
+        DataService.instance.addPosts(post: post)
+    }
+    @IBAction func cordaroneAdministered(_ sender: Any) {
+        countAmio += 1
+        if countAmio == 1 {
+            let post = Post(drugPath: "Amiodarone 300 mg", timePath: convertedDate)
+            DataService.instance.addPosts(post: post)
+        } else {
+            let post = Post(drugPath: "Amiodarone 150 mg", timePath: convertedDate)
+            DataService.instance.addPosts(post: post)
+        }
+    }
+    
+    
     @IBAction func reviewPressed(_ sender: Any) {
         toSummary()
     }
