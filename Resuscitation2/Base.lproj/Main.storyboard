@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KZ-4M-vQ6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CPR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W38-bg-P7r">
+                                        <rect key="frame" x="130" y="15" width="114" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.051864723730555541" green="0.6535047742722222" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="W38-bg-P7r" firstAttribute="centerY" secondItem="5KZ-4M-vQ6" secondAttribute="centerY" id="5FY-Ov-l37"/>
+                                    <constraint firstItem="W38-bg-P7r" firstAttribute="centerX" secondItem="5KZ-4M-vQ6" secondAttribute="centerX" id="Pue-pi-XE3"/>
+                                    <constraint firstAttribute="height" constant="84" id="zl3-R2-hce"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5G5-6G-eLu">
+                                <rect key="frame" x="16" y="92" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mc9-Gw-hkg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONN-xG-bmR" customClass="BigButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="452" width="96" height="96"/>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="6tW-Nf-Nzd"/>
+                                    <constraint firstAttribute="width" constant="96" id="ZKW-yd-vtN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pQZ-cb-blJ" kind="show" id="Gab-PZ-CW1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laH-Xr-rHT" customClass="BigButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="208" y="452" width="96" height="96"/>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="kog-FR-HvZ"/>
+                                    <constraint firstAttribute="height" constant="96" id="tfp-A4-lcR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vz8-yf-XmZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsh-NY-1e2" customClass="BigButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jUO-0J-bTn"/>
+                                    <constraint firstAttribute="height" constant="200" id="yiA-ve-EQq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Cardiac Arrest">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cardiacArrestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="002-bZ-aRe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="laH-Xr-rHT" secondAttribute="bottom" constant="20" id="Fmu-ob-XQT"/>
+                            <constraint firstItem="5G5-6G-eLu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FsM-Uh-Cs2"/>
+                            <constraint firstItem="5G5-6G-eLu" firstAttribute="top" secondItem="5KZ-4M-vQ6" secondAttribute="bottom" constant="8" id="NCW-0p-gQM"/>
+                            <constraint firstItem="laH-Xr-rHT" firstAttribute="centerY" secondItem="ONN-xG-bmR" secondAttribute="centerY" id="OkM-Z4-011"/>
+                            <constraint firstItem="jsh-NY-1e2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Srx-5W-qlE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ONN-xG-bmR" secondAttribute="bottom" constant="20" id="aCM-QC-7Fb"/>
+                            <constraint firstAttribute="trailing" secondItem="5KZ-4M-vQ6" secondAttribute="trailing" id="fp2-kT-DJO"/>
+                            <constraint firstItem="laH-Xr-rHT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iB4-zs-rcF"/>
+                            <constraint firstItem="ONN-xG-bmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qOh-ng-Pg4"/>
+                            <constraint firstItem="5G5-6G-eLu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r7X-el-Jtx"/>
+                            <constraint firstItem="5KZ-4M-vQ6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rXI-4N-H16"/>
+                            <constraint firstItem="jsh-NY-1e2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uPJ-aw-10T"/>
+                            <constraint firstItem="5KZ-4M-vQ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w9f-qz-iIr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historyBtn" destination="ONN-xG-bmR" id="lhC-s9-76K"/>
+                        <outlet property="placeLbl" destination="5G5-6G-eLu" id="jW5-an-TfN"/>
+                        <outlet property="resetBtn" destination="laH-Xr-rHT" id="OMV-cs-iKi"/>
+                        <segue destination="WFf-fd-SO0" kind="show" identifier="cardiacArrest" id="oF5-9m-yGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Summary View-->
+        <scene sceneID="1ua-gz-dSw">
+            <objects>
+                <viewController id="pQZ-cb-blJ" customClass="SummaryView" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zcC-Ku-l5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="ssf-bG-Gqz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yig-Of-xLx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-sH-oHF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTy-JA-2og" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="4" width="74" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="Fad-1W-IUR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="pQZ-cb-blJ" eventType="touchUpInside" id="51G-cU-YAP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRw-46-G1b" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="238" y="3" width="75" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="bXN-0w-Ytn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="vdq-UT-Oyu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deletePressed:" destination="pQZ-cb-blJ" eventType="touchUpInside" id="DkY-IQ-kWE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OTy-JA-2og" secondAttribute="bottom" constant="8" id="7qu-V2-ywn"/>
+                                    <constraint firstAttribute="height" constant="50" id="9qj-3x-qOt"/>
+                                    <constraint firstAttribute="trailing" secondItem="FRw-46-G1b" secondAttribute="trailing" constant="7" id="E8k-Ag-ehZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FRw-46-G1b" secondAttribute="bottom" constant="6" id="Oz0-IP-tKK"/>
+                                    <constraint firstItem="OTy-JA-2og" firstAttribute="top" secondItem="kgA-sH-oHF" secondAttribute="top" constant="4" id="VVA-0s-ewK"/>
+                                    <constraint firstItem="OTy-JA-2og" firstAttribute="leading" secondItem="kgA-sH-oHF" secondAttribute="leading" constant="8" id="dFs-Yd-Ykv"/>
+                                    <constraint firstItem="FRw-46-G1b" firstAttribute="top" secondItem="kgA-sH-oHF" secondAttribute="top" constant="3" id="yc1-tq-CjQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUu-lw-7Ag">
+                                <rect key="frame" x="0.0" y="49" width="320" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzK-61-4NG">
+                                        <rect key="frame" x="8" y="12" width="43" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="43" id="Art-fp-dtt"/>
+                                            <constraint firstAttribute="height" constant="21" id="bkT-Xv-Mmb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIme" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-qS-xxN">
+                                        <rect key="frame" x="131" y="12" width="181" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="FM8-M0-w7Q"/>
+                                            <constraint firstAttribute="height" constant="21" id="i8a-2n-Alu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lzK-61-4NG" firstAttribute="leading" secondItem="IUu-lw-7Ag" secondAttribute="leading" constant="8" id="3sd-g4-Azv"/>
+                                    <constraint firstAttribute="height" constant="46" id="AHk-eD-1fb"/>
+                                    <constraint firstAttribute="trailing" secondItem="AOC-qS-xxN" secondAttribute="trailing" constant="8" id="kvY-NN-wp8"/>
+                                    <constraint firstItem="AOC-qS-xxN" firstAttribute="centerY" secondItem="IUu-lw-7Ag" secondAttribute="centerY" id="nIW-TB-P5g"/>
+                                    <constraint firstItem="lzK-61-4NG" firstAttribute="centerY" secondItem="IUu-lw-7Ag" secondAttribute="centerY" id="rZ4-X7-fth"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-uG-9IC">
+                                <rect key="frame" x="0.0" y="95" width="320" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="gnK-bE-oPH" customClass="PostCell" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnK-bE-oPH" id="Fyj-Wc-l81">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Vm-wo-rl8">
+                                                    <rect key="frame" x="8" y="11" width="304" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVG-cc-XYs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="152" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0E-gJ-ZQ3">
+                                                            <rect key="frame" x="152" y="0.0" width="152" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4Vm-wo-rl8" firstAttribute="leading" secondItem="Fyj-Wc-l81" secondAttribute="leadingMargin" id="hIP-l4-pXx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4Vm-wo-rl8" secondAttribute="trailing" id="qwB-P8-rjd"/>
+                                                <constraint firstItem="4Vm-wo-rl8" firstAttribute="top" secondItem="Fyj-Wc-l81" secondAttribute="topMargin" constant="3" id="rP4-b5-oEQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventLbl" destination="bVG-cc-XYs" id="Umd-uQ-adq"/>
+                                            <outlet property="timeLineLbl" destination="p0E-gJ-ZQ3" id="zv2-bt-okb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="E5M-uG-9IC" secondAttribute="trailing" id="0gg-4R-Ifa"/>
+                            <constraint firstItem="kgA-sH-oHF" firstAttribute="leading" secondItem="yig-Of-xLx" secondAttribute="leading" id="3ID-uc-bpD"/>
+                            <constraint firstItem="E5M-uG-9IC" firstAttribute="leading" secondItem="yig-Of-xLx" secondAttribute="leading" id="78U-92-DVj"/>
+                            <constraint firstItem="E5M-uG-9IC" firstAttribute="top" secondItem="IUu-lw-7Ag" secondAttribute="bottom" id="8x6-lv-oLo"/>
+                            <constraint firstItem="IUu-lw-7Ag" firstAttribute="top" secondItem="zcC-Ku-l5g" secondAttribute="bottom" constant="29" id="QZT-tL-mfm"/>
+                            <constraint firstAttribute="trailing" secondItem="IUu-lw-7Ag" secondAttribute="trailing" id="YOT-na-l64"/>
+                            <constraint firstItem="ssf-bG-Gqz" firstAttribute="top" secondItem="E5M-uG-9IC" secondAttribute="bottom" id="aae-Sz-jfY"/>
+                            <constraint firstAttribute="trailing" secondItem="kgA-sH-oHF" secondAttribute="trailing" id="dDG-DJ-ipY"/>
+                            <constraint firstItem="kgA-sH-oHF" firstAttribute="top" secondItem="yig-Of-xLx" secondAttribute="top" id="kS8-1G-pbf"/>
+                            <constraint firstItem="IUu-lw-7Ag" firstAttribute="leading" secondItem="yig-Of-xLx" secondAttribute="leading" id="unZ-O2-Xd0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="E5M-uG-9IC" id="3kL-hg-L7K"/>
+                        <outlet property="totalTImeCPRLbl" destination="AOC-qS-xxN" id="CVe-IE-o1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYB-DY-7QJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="1535"/>
+        </scene>
+        <!--Reversible CauseVC-->
+        <scene sceneID="X3z-eF-xMr">
+            <objects>
+                <viewController id="44m-h2-lWF" customClass="ReversibleCauseVC" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sqx-LD-EJC"/>
+                        <viewControllerLayoutGuide type="bottom" id="GsW-1c-Gf2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ssz-rF-XG2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvQ-sa-2tQ">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BpL-8G-r4v"/>
+                                    <constraint firstAttribute="width" constant="46" id="Un6-jk-WSc"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="44m-h2-lWF" eventType="touchUpInside" id="ZuS-r7-hYy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hypotension" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0M-6L-aUJ">
+                                <rect key="frame" x="16" y="60" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IIb-MU-SFP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hypoxia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLH-Hj-UNq">
+                                <rect key="frame" x="16" y="103" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="f6i-pK-mTi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acidosis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-2W-sXM">
+                                <rect key="frame" x="16" y="146" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ab5-bw-VDH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hypo/HyperK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnc-SJ-aNF">
+                                <rect key="frame" x="16" y="189" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5NS-O8-58q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hypothermia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-7i-K7U">
+                                <rect key="frame" x="16" y="232" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="aI6-Jj-1BA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toxin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLG-vJ-i1I">
+                                <rect key="frame" x="16" y="275" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="vuh-Rx-UIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamponade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1W-wX-5Qp">
+                                <rect key="frame" x="16" y="318" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gD3-Sg-d0k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NV-2P-LJt">
+                                <rect key="frame" x="16" y="361" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="d8K-4T-Mey"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ak-Kw-2xf">
+                                <rect key="frame" x="16" y="404" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="hjg-aH-2w3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tension Pneumothorax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-P8-LYz">
+                                <rect key="frame" x="16" y="447" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7LM-UN-6aB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QLG-vJ-i1I" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="3XX-VU-9UM"/>
+                            <constraint firstItem="2NV-2P-LJt" firstAttribute="top" secondItem="Z1W-wX-5Qp" secondAttribute="bottom" constant="8" id="6hr-Tl-RtW"/>
+                            <constraint firstItem="ZvQ-sa-2tQ" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="7Fp-1C-ynm"/>
+                            <constraint firstItem="mnc-SJ-aNF" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="7Ji-LF-ZSb"/>
+                            <constraint firstItem="4Ak-Kw-2xf" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="7gl-yT-ZCe"/>
+                            <constraint firstItem="QLG-vJ-i1I" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="8Tf-ZX-KFj"/>
+                            <constraint firstItem="ZvQ-sa-2tQ" firstAttribute="top" secondItem="Sqx-LD-EJC" secondAttribute="bottom" id="8dd-Pu-mx0"/>
+                            <constraint firstItem="mnc-SJ-aNF" firstAttribute="top" secondItem="z1h-2W-sXM" secondAttribute="bottom" constant="8" id="CBH-hQ-yUf"/>
+                            <constraint firstItem="Z1W-wX-5Qp" firstAttribute="top" secondItem="QLG-vJ-i1I" secondAttribute="bottom" constant="8" id="E6U-q7-yAq"/>
+                            <constraint firstItem="Z1W-wX-5Qp" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="JKV-XU-PKg"/>
+                            <constraint firstItem="aYu-P8-LYz" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="MXh-Rq-Pw7"/>
+                            <constraint firstItem="M0M-6L-aUJ" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="SgX-2q-58S"/>
+                            <constraint firstItem="2dI-7i-K7U" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="SyZ-vw-roL"/>
+                            <constraint firstItem="M0M-6L-aUJ" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="UJh-3h-JY0"/>
+                            <constraint firstItem="z1h-2W-sXM" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="Y4A-rq-2x3"/>
+                            <constraint firstItem="2dI-7i-K7U" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="Z4U-eA-JMk"/>
+                            <constraint firstItem="QLG-vJ-i1I" firstAttribute="top" secondItem="2dI-7i-K7U" secondAttribute="bottom" constant="8" id="cGN-Ae-3ln"/>
+                            <constraint firstItem="z1h-2W-sXM" firstAttribute="top" secondItem="bLH-Hj-UNq" secondAttribute="bottom" constant="8" id="d0f-fO-tlS"/>
+                            <constraint firstItem="aYu-P8-LYz" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="eEf-li-3Ig"/>
+                            <constraint firstItem="z1h-2W-sXM" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="ext-uR-9Jz"/>
+                            <constraint firstItem="2NV-2P-LJt" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="iTK-W5-RkG"/>
+                            <constraint firstItem="2NV-2P-LJt" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="jqq-VG-nU8"/>
+                            <constraint firstItem="4Ak-Kw-2xf" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="lRz-EO-gqH"/>
+                            <constraint firstItem="Z1W-wX-5Qp" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="o2R-y5-jzA"/>
+                            <constraint firstItem="aYu-P8-LYz" firstAttribute="top" secondItem="4Ak-Kw-2xf" secondAttribute="bottom" constant="8" id="ogk-wc-P4W"/>
+                            <constraint firstItem="bLH-Hj-UNq" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="pNw-N3-Pzc"/>
+                            <constraint firstItem="bLH-Hj-UNq" firstAttribute="top" secondItem="M0M-6L-aUJ" secondAttribute="bottom" constant="8" id="rG6-EN-Vs2"/>
+                            <constraint firstItem="mnc-SJ-aNF" firstAttribute="trailing" secondItem="Ssz-rF-XG2" secondAttribute="trailingMargin" id="rTt-1k-cg2"/>
+                            <constraint firstItem="4Ak-Kw-2xf" firstAttribute="top" secondItem="2NV-2P-LJt" secondAttribute="bottom" constant="8" id="rtE-lr-Paw"/>
+                            <constraint firstItem="bLH-Hj-UNq" firstAttribute="leading" secondItem="Ssz-rF-XG2" secondAttribute="leadingMargin" id="tBu-t4-Duz"/>
+                            <constraint firstItem="2dI-7i-K7U" firstAttribute="top" secondItem="mnc-SJ-aNF" secondAttribute="bottom" constant="8" id="vvc-Vf-zJF"/>
+                            <constraint firstItem="M0M-6L-aUJ" firstAttribute="top" secondItem="ZvQ-sa-2tQ" secondAttribute="bottom" constant="10" id="wTe-ww-A7f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pom-jW-764" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="1925"/>
+        </scene>
+        <!--MedicationVC-->
+        <scene sceneID="fsK-ZS-bMF">
+            <objects>
+                <viewController id="d1V-nJ-hWH" customClass="MedicationVC" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a1e-97-dcX"/>
+                        <viewControllerLayoutGuide type="bottom" id="mBt-l6-HxN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="61k-w0-46E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-Ze-9Xd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8k-7D-5Rk">
+                                        <rect key="frame" x="8" y="48" width="73" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BackBtnPressed:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="zls-fY-5kF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmQ-WO-NxW">
+                                        <rect key="frame" x="89" y="12" width="196" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PmQ-WO-NxW" firstAttribute="centerY" secondItem="M8i-Ze-9Xd" secondAttribute="centerY" id="Nam-3O-Aip"/>
+                                    <constraint firstAttribute="height" constant="84" id="UQo-y0-3dL"/>
+                                    <constraint firstItem="PmQ-WO-NxW" firstAttribute="centerX" secondItem="M8i-Ze-9Xd" secondAttribute="centerX" id="Whk-BP-qx7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-Ms-GP1" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="92" width="288" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gpt-Jx-Nxb"/>
+                                </constraints>
+                                <state key="normal" title="10% Ca gluconate 10 ml"/>
+                                <connections>
+                                    <action selector="calciumGluconateAdministered:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="4Yl-3W-l8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUe-au-iwO" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="130" width="288" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qmk-gi-jly"/>
+                                </constraints>
+                                <state key="normal" title="7.5% NaCHO3"/>
+                                <connections>
+                                    <action selector="sodiumBicarbAdministered:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="A7h-M4-ERc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8C-4I-Il3" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="168" width="288" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4HW-gT-Dg4"/>
+                                </constraints>
+                                <state key="normal" title="Insulin 10 units"/>
+                                <connections>
+                                    <action selector="insulinAdministered:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="bpT-0A-IhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfi-yY-nW4" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="206" width="288" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nZd-dx-44r"/>
+                                </constraints>
+                                <state key="normal" title="50% glucose 50 ml"/>
+                                <connections>
+                                    <action selector="glucoseAdministered:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="J9p-ze-XhK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-Yv-9kc" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="244" width="288" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fcz-VK-Kmf"/>
+                                </constraints>
+                                <state key="normal" title="Epinephrine"/>
+                                <connections>
+                                    <action selector="adrenalineInjPressed:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="0hg-3D-Kxw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zfi-yY-nW4" firstAttribute="trailing" secondItem="61k-w0-46E" secondAttribute="trailingMargin" id="2BH-Ib-lQM"/>
+                            <constraint firstItem="JP1-Yv-9kc" firstAttribute="trailing" secondItem="61k-w0-46E" secondAttribute="trailingMargin" id="2sY-Nw-q8D"/>
+                            <constraint firstItem="n8C-4I-Il3" firstAttribute="trailing" secondItem="61k-w0-46E" secondAttribute="trailingMargin" id="477-xz-S2b"/>
+                            <constraint firstAttribute="trailing" secondItem="M8i-Ze-9Xd" secondAttribute="trailing" id="6WW-r5-och"/>
+                            <constraint firstItem="NUe-au-iwO" firstAttribute="leading" secondItem="61k-w0-46E" secondAttribute="leadingMargin" id="9Zh-PM-wAN"/>
+                            <constraint firstItem="Cbv-Ms-GP1" firstAttribute="trailing" secondItem="61k-w0-46E" secondAttribute="trailingMargin" id="AME-iU-gyK"/>
+                            <constraint firstItem="zfi-yY-nW4" firstAttribute="leading" secondItem="61k-w0-46E" secondAttribute="leadingMargin" id="ANJ-Fp-4Q7"/>
+                            <constraint firstItem="JP1-Yv-9kc" firstAttribute="leading" secondItem="61k-w0-46E" secondAttribute="leadingMargin" id="Jwt-sF-zfZ"/>
+                            <constraint firstItem="JP1-Yv-9kc" firstAttribute="top" secondItem="zfi-yY-nW4" secondAttribute="bottom" constant="8" id="R5U-W3-nsb"/>
+                            <constraint firstItem="n8C-4I-Il3" firstAttribute="leading" secondItem="61k-w0-46E" secondAttribute="leadingMargin" id="WIo-SM-OzY"/>
+                            <constraint firstItem="M8i-Ze-9Xd" firstAttribute="leading" secondItem="61k-w0-46E" secondAttribute="leading" id="XHe-f0-YwP"/>
+                            <constraint firstItem="n8C-4I-Il3" firstAttribute="top" secondItem="NUe-au-iwO" secondAttribute="bottom" constant="8" id="b7t-HX-rOP"/>
+                            <constraint firstItem="M8i-Ze-9Xd" firstAttribute="top" secondItem="61k-w0-46E" secondAttribute="top" id="bKO-UM-JRR"/>
+                            <constraint firstItem="NUe-au-iwO" firstAttribute="top" secondItem="Cbv-Ms-GP1" secondAttribute="bottom" constant="8" id="cpd-CF-4NL"/>
+                            <constraint firstItem="zfi-yY-nW4" firstAttribute="top" secondItem="n8C-4I-Il3" secondAttribute="bottom" constant="8" id="dX0-QY-sOi"/>
+                            <constraint firstItem="NUe-au-iwO" firstAttribute="trailing" secondItem="61k-w0-46E" secondAttribute="trailingMargin" id="esS-y1-x9w"/>
+                            <constraint firstItem="Cbv-Ms-GP1" firstAttribute="leading" secondItem="61k-w0-46E" secondAttribute="leadingMargin" id="mEw-4G-HhR"/>
+                            <constraint firstItem="Cbv-Ms-GP1" firstAttribute="top" secondItem="M8i-Ze-9Xd" secondAttribute="bottom" constant="8" id="nXw-i9-w9i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxd-Of-BdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="-592"/>
+        </scene>
+        <!--RhythmVC1-->
+        <scene sceneID="y2G-5X-PkR">
+            <objects>
+                <viewController id="WFf-fd-SO0" customClass="RhythmVC1" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="raC-JG-8s3"/>
+                        <viewControllerLayoutGuide type="bottom" id="nd8-gb-9GQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X4j-mJ-c8u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAH-zw-a3T">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-G9-iWM">
+                                        <rect key="frame" x="8" y="28" width="304" height="27.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="090-57-vWO"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-dF-TnD">
+                                <rect key="frame" x="16" y="104" width="288" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-kM-qU1" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="VF">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="VFBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="him-go-LdU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-7H-aHQ" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="57" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Pulseless VT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pVTBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="2Ek-mG-806"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heD-vB-nid" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Asystole">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="asystoleBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="Rnl-UP-u87"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-9E-a7O" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="171" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="PEA">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PEABtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="lTE-rr-Fbq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR5-qu-JY7">
+                                <rect key="frame" x="65" y="342" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="B3u-MO-0uC"/>
+                                    <constraint firstAttribute="width" constant="190" id="az9-Df-evk"/>
+                                </constraints>
+                                <state key="normal" image="cpr"/>
+                                <connections>
+                                    <action selector="startCPRPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="r9a-1h-rkv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start CPR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ2-oR-Ryp">
+                                <rect key="frame" x="16" y="413" width="288" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hAH-zw-a3T" firstAttribute="top" secondItem="X4j-mJ-c8u" secondAttribute="top" id="1vm-ta-GRs"/>
+                            <constraint firstItem="hAH-zw-a3T" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leading" id="7DI-WB-gUT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hy6-dF-TnD" secondAttribute="trailing" id="J4U-QN-aEp"/>
+                            <constraint firstItem="nd8-gb-9GQ" firstAttribute="top" secondItem="NR5-qu-JY7" secondAttribute="bottom" constant="36" id="WAv-In-32m"/>
+                            <constraint firstAttribute="trailing" secondItem="hAH-zw-a3T" secondAttribute="trailing" id="h9r-eq-Kr9"/>
+                            <constraint firstItem="NR5-qu-JY7" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="mEj-oV-iF5"/>
+                            <constraint firstItem="hy6-dF-TnD" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="20" id="tj1-xG-mm0"/>
+                            <constraint firstItem="hy6-dF-TnD" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="yjG-ae-q8N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CPRTimer" destination="f8b-G9-iWM" id="IgJ-iI-woo"/>
+                        <outlet property="cprBtn" destination="NR5-qu-JY7" id="Mkr-fs-eGn"/>
+                        <outlet property="startCPRLbl" destination="CZ2-oR-Ryp" id="Jma-PS-qC0"/>
+                        <segue destination="htE-xB-9gY" kind="show" identifier="rhythmToVF" id="rgd-Hb-5tJ"/>
+                        <segue destination="KpT-6P-geV" kind="show" identifier="rhythmToAsyst" id="qwy-OE-dh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULi-4M-hJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="-26.408450704225352"/>
+        </scene>
+        <!--AsystolePEAVC-->
+        <scene sceneID="phY-IP-SNA">
+            <objects>
+                <viewController id="KpT-6P-geV" customClass="AsystolePEAVC" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GDL-76-Jgr"/>
+                        <viewControllerLayoutGuide type="bottom" id="8yd-Rp-iAo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Fo-Ie-1hr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-Aa-jGI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-Mk-0IE">
+                                        <rect key="frame" x="8" y="27" width="304" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km8-si-HVQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84O-zp-b2Q" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="0.0" width="152" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="6QY-Rv-DCX"/>
+                                                    <constraint firstAttribute="width" constant="87" id="Tti-oU-WRa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <state key="normal" title="Medications">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="d1V-nJ-hWH" kind="show" id="THv-tL-lzj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4St-bJ-De6"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="oOP-TP-LcP"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="0Q7-pA-TQZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Twl-Mk-0IE" secondAttribute="trailing" constant="8" id="80W-4U-qvj"/>
+                                    <constraint firstItem="Twl-Mk-0IE" firstAttribute="centerY" secondItem="q3Z-Aa-jGI" secondAttribute="centerY" id="9VR-F1-bdL"/>
+                                    <constraint firstItem="Twl-Mk-0IE" firstAttribute="leading" secondItem="q3Z-Aa-jGI" secondAttribute="leading" constant="8" id="DEG-cJ-RMW"/>
+                                    <constraint firstItem="Twl-Mk-0IE" firstAttribute="centerX" secondItem="q3Z-Aa-jGI" secondAttribute="centerX" id="tyl-CV-hXM"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" distribution="equalCentering" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="EsX-HS-IhL">
+                                <rect key="frame" x="73" y="485" width="174" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdJ-7N-T21">
+                                        <rect key="frame" x="0.0" y="45" width="49" height="30"/>
+                                        <state key="normal" title="Review"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xee-pj-JqF">
+                                        <rect key="frame" x="99" y="0.0" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="93e-jQ-VxG"/>
+                                            <constraint firstAttribute="width" constant="75" id="Vyx-9Q-XhP"/>
+                                        </constraints>
+                                        <state key="normal" image="StopBtn"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-iM-ptw" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="70" y="412" width="181" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Reversible Causes"/>
+                                <connections>
+                                    <segue destination="44m-h2-lWF" kind="show" id="AQ2-vr-4Js"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q3Z-Aa-jGI" firstAttribute="leading" secondItem="7Fo-Ie-1hr" secondAttribute="leading" id="JD0-Bo-TUH"/>
+                            <constraint firstItem="q3Z-Aa-jGI" firstAttribute="top" secondItem="7Fo-Ie-1hr" secondAttribute="top" id="Utn-mn-cj4"/>
+                            <constraint firstAttribute="trailing" secondItem="q3Z-Aa-jGI" secondAttribute="trailing" id="cGS-Zw-40s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="pQZ-cb-blJ" kind="show" id="cne-EZ-qee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCl-pL-bx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2445" y="1082"/>
+        </scene>
+        <!--VFpVT-->
+        <scene sceneID="tlj-0h-1RZ">
+            <objects>
+                <viewController id="htE-xB-9gY" userLabel="VFpVT" customClass="VFpVT" customModule="Resuscitation2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Pg-et-Hi3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rPR-dM-sh7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rBe-t7-mgC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IA3-qz-UTa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IWB-Os-eed">
+                                        <rect key="frame" x="8" y="27" width="304" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd8-Er-HwM">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAI-Di-Oo0" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="0.0" width="152" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="eLA-mc-X3D"/>
+                                                    <constraint firstAttribute="width" constant="87" id="i4S-Yo-MEu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <state key="normal" title="Medications">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="d1V-nJ-hWH" kind="show" id="t90-hc-atn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ptT-gJ-9VA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IWB-Os-eed" firstAttribute="centerX" secondItem="IA3-qz-UTa" secondAttribute="centerX" id="QtZ-fT-Bsm"/>
+                                    <constraint firstAttribute="trailing" secondItem="IWB-Os-eed" secondAttribute="trailing" constant="8" id="mBp-hW-Xhe"/>
+                                    <constraint firstAttribute="height" constant="84" id="nTg-gE-euI"/>
+                                    <constraint firstItem="IWB-Os-eed" firstAttribute="leading" secondItem="IA3-qz-UTa" secondAttribute="leading" constant="8" id="nfX-1U-IeE"/>
+                                    <constraint firstItem="IWB-Os-eed" firstAttribute="centerY" secondItem="IA3-qz-UTa" secondAttribute="centerY" id="yQ5-52-ull"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-9G-E2p">
+                                <rect key="frame" x="25" y="144" width="270" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Defibrillation"/>
+                                <connections>
+                                    <action selector="defibrillationPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="Il1-P4-1HF"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" distribution="equalCentering" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="XSp-hM-SdX">
+                                <rect key="frame" x="71" y="485" width="174" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-kx-HXk">
+                                        <rect key="frame" x="0.0" y="45" width="49" height="30"/>
+                                        <state key="normal" title="Review"/>
+                                        <connections>
+                                            <action selector="reviewPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="o1f-Mk-Mcn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-Ic-qmf">
+                                        <rect key="frame" x="99" y="0.0" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="BB3-OZ-Ffb"/>
+                                            <constraint firstAttribute="width" constant="75" id="w3o-XW-gUe"/>
+                                        </constraints>
+                                        <state key="normal" image="StopBtn"/>
+                                        <connections>
+                                            <action selector="stopCPRPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="VsD-w4-lN0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-TY-3f3" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="68" y="397" width="181" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Reversible Causes"/>
+                                <connections>
+                                    <segue destination="44m-h2-lWF" kind="show" id="X8J-J4-Zbh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CPR Inteval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-Za-LTf">
+                                <rect key="frame" x="16" y="92" width="151" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiX-fs-bSJ">
+                                <rect key="frame" x="213" y="92" width="91" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoP-CM-9RA">
+                                <rect key="frame" x="84" y="227" width="148" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="CPR-1"/>
+                                <connections>
+                                    <action selector="CPRPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="GbV-xb-5DQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-lz-D1e">
+                                <rect key="frame" x="16" y="274" width="288" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-GS-GYf">
+                                <rect key="frame" x="48" y="200" width="221" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52813042529999998" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="Vep-Sp-Nlx"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goReset" id="MTR-xf-Lgw"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-OA-alW">
+                                <rect key="frame" x="16" y="144" width="288" height="213"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUE-Jn-Z45" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="VF">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="VFBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="Oxp-XK-xHD"/>
+                                            <action selector="vfBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="Eaz-DB-qXF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-6O-O7w" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="57" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Pulseless VT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pVTBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="12K-AZ-SKD"/>
+                                            <action selector="pvtBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="GQn-30-vMt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNq-2b-TwA" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Asystole">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="asystoleBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="ehP-qk-MnC"/>
+                                            <action selector="aystoleBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="dsV-O5-s2R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-HU-PTw" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="171" width="288" height="42"/>
+                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="PEA">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PEABtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="oQ3-8K-s4p"/>
+                                            <action selector="peaBtnPressed:" destination="htE-xB-9gY" eventType="touchUpInside" id="xj8-9X-t15"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Ei-bTL">
+                                <rect key="frame" x="24" y="444" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="EPI"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-d5-2co">
+                                <rect key="frame" x="262" y="444" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AMIO"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nWq-OA-alW" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leadingMargin" id="0V5-c4-rAj"/>
+                            <constraint firstItem="nWq-OA-alW" firstAttribute="top" secondItem="3Kc-Za-LTf" secondAttribute="bottom" constant="8" id="Buo-Uc-PVI"/>
+                            <constraint firstItem="IA3-qz-UTa" firstAttribute="leading" secondItem="rBe-t7-mgC" secondAttribute="leading" id="MlC-0S-Hzf"/>
+                            <constraint firstItem="IA3-qz-UTa" firstAttribute="top" secondItem="rBe-t7-mgC" secondAttribute="top" id="hs1-Sr-81k"/>
+                            <constraint firstAttribute="trailing" secondItem="IA3-qz-UTa" secondAttribute="trailing" id="igO-1l-Ggk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nWq-OA-alW" secondAttribute="trailing" id="p6X-6h-sOX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CPRBtn" destination="XoP-CM-9RA" id="abq-Xw-7CH"/>
+                        <outlet property="amiodaroneBtn" destination="jLB-d5-2co" id="ZAf-0Q-uMf"/>
+                        <outlet property="asystoleBtn" destination="XNq-2b-TwA" id="5he-Q4-D08"/>
+                        <outlet property="checkRhythmLbl" destination="g53-lz-D1e" id="p7h-Nk-kZD"/>
+                        <outlet property="cprIntervalLbl" destination="3Kc-Za-LTf" id="Mwu-M4-mCy"/>
+                        <outlet property="defibrillationBtn" destination="c3k-9G-E2p" id="nAl-6I-48I"/>
+                        <outlet property="epinephrineBtn" destination="5n1-Ei-bTL" id="9PR-8M-hf5"/>
+                        <outlet property="peaBtn" destination="FDI-HU-PTw" id="ORH-ma-LJg"/>
+                        <outlet property="pvtBtn" destination="QZx-6O-O7w" id="004-pW-Q7q"/>
+                        <outlet property="resetBtn" destination="bmo-GS-GYf" id="3Gd-a2-Def"/>
+                        <outlet property="reverseBtn" destination="4lC-TY-3f3" id="i06-OV-mRT"/>
+                        <outlet property="totalCPRTimeLbl" destination="kd8-Er-HwM" id="P7R-te-dTN"/>
+                        <outlet property="twoMinsLbl" destination="qiX-fs-bSJ" id="bnb-Lx-dJb"/>
+                        <outlet property="vfBtn" destination="LUE-Jn-Z45" id="HuA-mv-3Gi"/>
+                        <segue destination="pQZ-cb-blJ" kind="show" identifier="VFpVT1ToSummary" id="ZyC-qg-zAK"/>
+                        <segue destination="KpT-6P-geV" kind="show" identifier="vtToAsyst" id="oJh-f2-6je"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbn-1I-CMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197.5" y="147.88732394366198"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CPR-1" width="512" height="321"/>
+        <image name="StopBtn" width="256" height="256"/>
+        <image name="cpr" width="960" height="888"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZyC-qg-zAK"/>
+        <segue reference="t90-hc-atn"/>
+        <segue reference="X8J-J4-Zbh"/>
+        <segue reference="oJh-f2-6je"/>
+    </inferredMetricsTieBreakers>
+</document>
