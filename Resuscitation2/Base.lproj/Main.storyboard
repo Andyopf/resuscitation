@@ -445,19 +445,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-Ze-9Xd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8k-7D-5Rk">
-                                        <rect key="frame" x="8" y="48" width="73" height="29"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8k-7D-5Rk">
+                                        <rect key="frame" x="8" y="18" width="51" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <state key="normal" title="Back">
+                                        <state key="normal" image="left icon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="BackBtnPressed:" destination="d1V-nJ-hWH" eventType="touchUpInside" id="zls-fY-5kF"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmQ-WO-NxW">
-                                        <rect key="frame" x="89" y="12" width="196" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmQ-WO-NxW">
+                                        <rect key="frame" x="121" y="18" width="191" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -465,9 +465,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="PmQ-WO-NxW" firstAttribute="centerY" secondItem="M8i-Ze-9Xd" secondAttribute="centerY" id="Nam-3O-Aip"/>
                                     <constraint firstAttribute="height" constant="84" id="UQo-y0-3dL"/>
-                                    <constraint firstItem="PmQ-WO-NxW" firstAttribute="centerX" secondItem="M8i-Ze-9Xd" secondAttribute="centerX" id="Whk-BP-qx7"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-Ms-GP1" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
@@ -551,7 +549,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxd-Of-BdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2393" y="-325"/>
+            <point key="canvasLocation" x="2392.5" y="-325.35211267605632"/>
         </scene>
         <!--RhythmVC1-->
         <scene sceneID="y2G-5X-PkR">
@@ -568,102 +566,180 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAH-zw-a3T">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-G9-iWM">
-                                        <rect key="frame" x="8" y="28" width="107" height="28"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAI-Di-Oo0" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="26" width="152" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="eLA-mc-X3D"/>
-                                            <constraint firstAttribute="width" constant="87" id="i4S-Yo-MEu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                        <state key="normal" title="Medications">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="d1V-nJ-hWH" kind="show" id="t90-hc-atn"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-kK-odh">
+                                        <rect key="frame" x="8" y="28" width="304" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-G9-iWM">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAI-Di-Oo0" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="0.0" width="152" height="40"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <state key="normal" title="Medications">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="d1V-nJ-hWH" kind="show" id="t90-hc-atn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="090-57-vWO"/>
-                                    <constraint firstAttribute="trailing" secondItem="cAI-Di-Oo0" secondAttribute="trailing" constant="8" id="AWa-2c-KG3"/>
-                                    <constraint firstItem="f8b-G9-iWM" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="top" constant="28" id="WIB-lh-eBr"/>
-                                    <constraint firstItem="cAI-Di-Oo0" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="top" constant="26" id="ZJ5-dq-qzn"/>
-                                    <constraint firstItem="f8b-G9-iWM" firstAttribute="leading" secondItem="hAH-zw-a3T" secondAttribute="leading" constant="8" id="g2g-1R-e1W"/>
+                                    <constraint firstItem="dzb-kK-odh" firstAttribute="leading" secondItem="hAH-zw-a3T" secondAttribute="leading" constant="8" id="Q0F-9C-GFw"/>
+                                    <constraint firstAttribute="trailing" secondItem="dzb-kK-odh" secondAttribute="trailing" constant="8" id="iaG-6A-77Y"/>
+                                    <constraint firstItem="dzb-kK-odh" firstAttribute="centerY" secondItem="hAH-zw-a3T" secondAttribute="centerY" id="q9S-qn-oYf"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-dF-TnD">
-                                <rect key="frame" x="16" y="104" width="288" height="213"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-kM-qU1" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
-                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="VF">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="VFBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="him-go-LdU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-7H-aHQ" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="57" width="288" height="42"/>
-                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Pulseless VT">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pVTBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="2Ek-mG-806"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heD-vB-nid" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114" width="288" height="42"/>
-                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Asystole">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="asystoleBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="Rnl-UP-u87"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-9E-a7O" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="171" width="288" height="42"/>
-                                        <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="PEA">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="PEABtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="lTE-rr-Fbq"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR5-qu-JY7">
-                                <rect key="frame" x="65" y="150" width="190" height="190"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-kx-HXk">
+                                <rect key="frame" x="16" y="460" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="B3u-MO-0uC"/>
-                                    <constraint firstAttribute="width" constant="190" id="az9-Df-evk"/>
+                                    <constraint firstAttribute="height" constant="100" id="5ml-h0-YeL"/>
+                                    <constraint firstAttribute="width" constant="100" id="8cM-bG-XtI"/>
                                 </constraints>
-                                <state key="normal" image="cpr"/>
+                                <state key="normal" image="StopBtn"/>
                                 <connections>
-                                    <action selector="startCPRPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="r9a-1h-rkv"/>
+                                    <action selector="reviewBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="Lbb-ca-RFy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-Ic-qmf">
+                                <rect key="frame" x="204" y="460" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="98H-rL-5gK"/>
+                                    <constraint firstAttribute="height" constant="100" id="nEo-1M-rUb"/>
+                                </constraints>
+                                <state key="normal" image="StopBtn"/>
+                                <connections>
+                                    <action selector="stopCPRPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="AMZ-Hg-yg5"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YTF-wE-hqe">
+                                <rect key="frame" x="16" y="92" width="288" height="338"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4U-ea-B20">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CPR Inteval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-Za-LTf">
+                                                <rect key="frame" x="0.0" y="0.0" width="236.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiX-fs-bSJ">
+                                                <rect key="frame" x="236.5" y="0.0" width="51.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-dF-TnD">
+                                        <rect key="frame" x="0.0" y="33" width="288" height="219"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-kM-qU1" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
+                                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="VF">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="VFBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="him-go-LdU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-7H-aHQ" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="59" width="288" height="42"/>
+                                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Pulseless VT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pVTBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="2Ek-mG-806"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heD-vB-nid" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="118" width="288" height="42"/>
+                                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Asystole">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="asystoleBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="Rnl-UP-u87"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-9E-a7O" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="177" width="288" height="42"/>
+                                                <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="PEA">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="PEABtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="lTE-rr-Fbq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vvp-kI-64d">
+                                        <rect key="frame" x="0.0" y="256" width="288" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-TY-3f3" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Reversible Causes"/>
+                                                <connections>
+                                                    <segue destination="44m-h2-lWF" kind="show" id="X8J-J4-Zbh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="C38-fs-c2g">
+                                        <rect key="frame" x="0.0" y="299" width="288" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Ei-bTL">
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="EPI"/>
+                                                <connections>
+                                                    <action selector="epinepAdministered:" destination="WFf-fd-SO0" eventType="touchUpInside" id="eCW-yX-Kn5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-d5-2co">
+                                                <rect key="frame" x="164" y="0.0" width="124" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="AMIO"/>
+                                                <connections>
+                                                    <action selector="cordaroneAdministered:" destination="WFf-fd-SO0" eventType="touchUpInside" id="6KK-6e-Obm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="C38-fs-c2g" firstAttribute="leading" secondItem="YTF-wE-hqe" secondAttribute="leading" id="IQ3-65-Jgf"/>
+                                    <constraint firstItem="hy6-dF-TnD" firstAttribute="leading" secondItem="YTF-wE-hqe" secondAttribute="leading" id="SdH-GY-jZG"/>
+                                    <constraint firstAttribute="trailing" secondItem="hy6-dF-TnD" secondAttribute="trailing" id="U7u-as-j05"/>
+                                    <constraint firstItem="C4U-ea-B20" firstAttribute="leading" secondItem="YTF-wE-hqe" secondAttribute="leading" id="cDS-TG-Jic"/>
+                                    <constraint firstAttribute="trailing" secondItem="C4U-ea-B20" secondAttribute="trailing" id="r5f-oy-DN0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vvp-kI-64d" secondAttribute="trailing" id="rAk-j9-qMX"/>
+                                    <constraint firstAttribute="trailing" secondItem="C38-fs-c2g" secondAttribute="trailing" id="rJy-qO-f6H"/>
+                                    <constraint firstItem="Vvp-kI-64d" firstAttribute="leading" secondItem="YTF-wE-hqe" secondAttribute="leading" id="uyy-Oo-WRH"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-GS-GYf" customClass="BigButton" customModule="Resuscitation2" customModuleProvider="target">
                                 <rect key="frame" x="60" y="133" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.52813042529999998" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="6Cc-ig-GXn"/>
-                                    <constraint firstAttribute="width" constant="200" id="qg1-GZ-9VB"/>
+                                    <constraint firstAttribute="height" constant="200" id="6jC-jE-nZs"/>
+                                    <constraint firstAttribute="width" constant="200" id="H26-nP-a6D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Reset"/>
@@ -672,96 +748,50 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goReset" id="MTR-xf-Lgw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-TY-3f3" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                <rect key="frame" x="70" y="441" width="181" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-9G-E2p">
+                                <rect key="frame" x="25" y="347" width="270" height="65"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Reversible Causes"/>
-                                <connections>
-                                    <segue destination="44m-h2-lWF" kind="show" id="X8J-J4-Zbh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Ei-bTL">
-                                <rect key="frame" x="16" y="479" width="30" height="30"/>
-                                <state key="normal" title="EPI"/>
-                                <connections>
-                                    <action selector="epinepAdministered:" destination="WFf-fd-SO0" eventType="touchUpInside" id="eCW-yX-Kn5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-d5-2co">
-                                <rect key="frame" x="266" y="479" width="38" height="30"/>
-                                <state key="normal" title="AMIO"/>
-                                <connections>
-                                    <action selector="cordaroneAdministered:" destination="WFf-fd-SO0" eventType="touchUpInside" id="6KK-6e-Obm"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" distribution="equalCentering" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="XSp-hM-SdX">
-                                <rect key="frame" x="65" y="488" width="174" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-kx-HXk">
-                                        <rect key="frame" x="0.0" y="45" width="49" height="30"/>
-                                        <state key="normal" title="Review"/>
-                                        <connections>
-                                            <action selector="reviewBtnPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="Lbb-ca-RFy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-Ic-qmf">
-                                        <rect key="frame" x="99" y="0.0" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="BB3-OZ-Ffb"/>
-                                            <constraint firstAttribute="width" constant="75" id="w3o-XW-gUe"/>
-                                        </constraints>
-                                        <state key="normal" image="StopBtn"/>
-                                        <connections>
-                                            <action selector="stopCPRPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="AMZ-Hg-yg5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiX-fs-bSJ">
-                                <rect key="frame" x="229" y="91" width="91" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-9G-E2p">
-                                <rect key="frame" x="25" y="406" width="270" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="IEr-cA-sbN"/>
+                                    <constraint firstAttribute="width" constant="270" id="sNS-RP-GFf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Defibrillation"/>
                                 <connections>
                                     <action selector="defibrillationPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="nOC-CM-QGa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CPR Inteval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-Za-LTf">
-                                <rect key="frame" x="15" y="91" width="151" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR5-qu-JY7">
+                                <rect key="frame" x="65" y="150" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="oZI-Ur-giv"/>
+                                    <constraint firstAttribute="width" constant="190" id="q79-LK-JcY"/>
+                                </constraints>
+                                <state key="normal" image="cpr"/>
+                                <connections>
+                                    <action selector="startCPRPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="r9a-1h-rkv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bmo-GS-GYf" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="0P2-M1-BLr"/>
+                            <constraint firstItem="nU6-Ic-qmf" firstAttribute="trailing" secondItem="X4j-mJ-c8u" secondAttribute="trailingMargin" id="0E9-cP-q8D"/>
                             <constraint firstItem="hAH-zw-a3T" firstAttribute="top" secondItem="X4j-mJ-c8u" secondAttribute="top" id="1vm-ta-GRs"/>
                             <constraint firstItem="hAH-zw-a3T" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leading" id="7DI-WB-gUT"/>
-                            <constraint firstItem="3Kc-Za-LTf" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leading" constant="15" id="7EF-lQ-uBr"/>
-                            <constraint firstItem="bmo-GS-GYf" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="49" id="FJK-di-UzF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jLB-d5-2co" secondAttribute="trailing" id="GGM-U5-hkK"/>
-                            <constraint firstItem="qiX-fs-bSJ" firstAttribute="trailing" secondItem="X4j-mJ-c8u" secondAttribute="trailingMargin" constant="16" id="Hu7-cZ-6rm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hy6-dF-TnD" secondAttribute="trailing" id="J4U-QN-aEp"/>
-                            <constraint firstItem="NR5-qu-JY7" firstAttribute="top" secondItem="3Kc-Za-LTf" secondAttribute="bottom" constant="15" id="S6s-uy-gxE"/>
-                            <constraint firstAttribute="trailing" secondItem="qiX-fs-bSJ" secondAttribute="trailing" id="XW4-9I-ddx"/>
-                            <constraint firstItem="3Kc-Za-LTf" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="7" id="bEc-vZ-rfA"/>
-                            <constraint firstItem="qiX-fs-bSJ" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="7" id="d51-8A-1QN"/>
+                            <constraint firstItem="YTF-wE-hqe" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="8" id="9m5-Cr-M2N"/>
+                            <constraint firstItem="NR5-qu-JY7" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="66" id="Pf5-mG-gEi"/>
+                            <constraint firstItem="nd8-gb-9GQ" firstAttribute="top" secondItem="nU6-Ic-qmf" secondAttribute="bottom" constant="8" id="TNg-gB-VLS"/>
+                            <constraint firstItem="YTF-wE-hqe" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="UWX-2U-wR0"/>
+                            <constraint firstItem="c3k-9G-E2p" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="enP-27-ei7"/>
+                            <constraint firstItem="nd8-gb-9GQ" firstAttribute="top" secondItem="Yyy-kx-HXk" secondAttribute="bottom" constant="8" id="gEt-1s-k5z"/>
                             <constraint firstAttribute="trailing" secondItem="hAH-zw-a3T" secondAttribute="trailing" id="h9r-eq-Kr9"/>
-                            <constraint firstItem="NR5-qu-JY7" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="mEj-oV-iF5"/>
-                            <constraint firstItem="hy6-dF-TnD" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="20" id="tj1-xG-mm0"/>
-                            <constraint firstItem="hy6-dF-TnD" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="yjG-ae-q8N"/>
-                            <constraint firstItem="5n1-Ei-bTL" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="zzk-cl-dUL"/>
+                            <constraint firstItem="bmo-GS-GYf" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="ioG-sH-UJ1"/>
+                            <constraint firstItem="c3k-9G-E2p" firstAttribute="top" secondItem="NR5-qu-JY7" secondAttribute="bottom" constant="7" id="nLv-KN-Zsg"/>
+                            <constraint firstItem="nU6-Ic-qmf" firstAttribute="top" secondItem="YTF-wE-hqe" secondAttribute="bottom" constant="30" id="nuU-3f-qaE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YTF-wE-hqe" secondAttribute="trailing" id="oxN-oe-M1D"/>
+                            <constraint firstItem="bmo-GS-GYf" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="49" id="sH7-Uq-8z9"/>
+                            <constraint firstItem="Yyy-kx-HXk" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="vXp-xj-zgQ"/>
+                            <constraint firstItem="NR5-qu-JY7" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="xFM-iF-wL9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -790,6 +820,7 @@
     <resources>
         <image name="StopBtn" width="256" height="256"/>
         <image name="cpr" width="960" height="888"/>
+        <image name="left icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RzV-2z-2Nx"/>

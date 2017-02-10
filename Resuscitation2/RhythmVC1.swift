@@ -13,8 +13,6 @@ import AVFoundation
 
 class RhythmVC1: UIViewController {
     
-
-//    @IBOutlet weak var checkRhythmLbl: UILabel!
     @IBOutlet weak var CPRTimer: UILabel!
     @IBOutlet weak var twoMinsLbl: UILabel!
     @IBOutlet weak var intervalLbl: UILabel!
@@ -35,8 +33,6 @@ class RhythmVC1: UIViewController {
     
     var CPRTime = 0
     var cprInterval = 20
-    var now = NSDate()
-    var showDatePattern = DateFormatter()
     var convertedDate: String = ""
     var timer1: Timer!
     var timer2: Timer!
@@ -50,8 +46,6 @@ class RhythmVC1: UIViewController {
         super.viewDidLoad()
         
         totalCPRTime()
-        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
-        convertedDate = showDatePattern.string(from: now as Date)
         playMetronome()
         resetBtn.isHidden = true
         defibrillationBtn.isHidden = true
@@ -74,6 +68,13 @@ class RhythmVC1: UIViewController {
             print(err.debugDescription)
         }
 
+    }
+    
+    func dateEvent2() {
+        var now = NSDate()
+        var showDatePattern = DateFormatter()
+        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
+        convertedDate = showDatePattern.string(from: now as Date)
     }
     
     func totalCPRTime() {
@@ -126,15 +127,6 @@ class RhythmVC1: UIViewController {
         vfBtn.isHidden = true
     }
     
-//    func rhythmCheck() {
-//        checkRhythmLbl.isHidden = false
-//        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RhythmVC1.checkEcg), userInfo: nil, repeats: false)
-//    }
-//    
-//    func checkEcg() {
-//        checkRhythmLbl.isHidden = true
-//    }
-    
     func toSummary() {
         self.performSegue(withIdentifier: "ToSummary", sender: nil)
     }
@@ -155,7 +147,7 @@ class RhythmVC1: UIViewController {
     //ECG function buttons
     
     @IBAction func VFBtnPressed(_ sender: Any) {
-        
+        dateEvent2()
         let post = Post(drugPath: "VF", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
         ecgDisappear()
@@ -164,7 +156,7 @@ class RhythmVC1: UIViewController {
     }
     
     @IBAction func pVTBtnPressed(_ sender: Any) {
-        
+        dateEvent2()
         let post = Post(drugPath: "pVT", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
         ecgDisappear()
@@ -173,7 +165,7 @@ class RhythmVC1: UIViewController {
     }
     
     @IBAction func asystoleBtnPressed(_ sender: Any) {
-        
+        dateEvent2()
         let post = Post(drugPath: "Asystole", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
         ecgDisappear()
@@ -182,7 +174,7 @@ class RhythmVC1: UIViewController {
     }
     
     @IBAction func PEABtnPressed(_ sender: Any) {
-        
+        dateEvent2()
         let post = Post(drugPath: "PEA", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
         ecgDisappear()
@@ -197,6 +189,7 @@ class RhythmVC1: UIViewController {
         cprCountDown()
         cprBtn.isHidden = true
         setCPR += 1
+        dateEvent2()
         if setCPR == 0 {
             let post = Post(drugPath: "Start CPR", timePath: convertedDate)
             DataService.instance.addPosts(post: post)
@@ -208,6 +201,7 @@ class RhythmVC1: UIViewController {
     }
     
     @IBAction func defibrillationPressed(_ sender: Any) {
+        dateEvent2()
         defibrillationBtn.isHidden = true
         let post = Post(drugPath: "defibrillation", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
@@ -217,6 +211,7 @@ class RhythmVC1: UIViewController {
     
     // drugs buttons
     @IBAction func epinepAdministered(_ sender: Any) {
+        dateEvent2()
         let post = Post(drugPath: "Epinephrine 1 mg", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
         epinephrineBtn.isHidden = true
@@ -225,6 +220,7 @@ class RhythmVC1: UIViewController {
     @IBAction func cordaroneAdministered(_ sender: Any) {
         amiodaroneBtn.isHidden = true
         countAmio += 1
+        dateEvent2()
         if countAmio == 1 {
             let post = Post(drugPath: "Amiodarone 300 mg", timePath: convertedDate)
             DataService.instance.addPosts(post: post)
@@ -238,10 +234,18 @@ class RhythmVC1: UIViewController {
         toSummary()
         timer1.invalidate()
         timer2.invalidate()
+        dateEvent2()
+        let post = Post(drugPath: "Stop CPR", timePath: convertedDate)
+        DataService.instance.addPosts(post: post)
+        
+        setCPR = 0
+        countAmio = 0
         
         cprBtn.isHidden = true
         defibrillationBtn.isHidden = true
         reverseBtn.isHidden = true
+        amiodaroneBtn.isHidden = true
+        epinephrineBtn.isHidden = true
         timer3 = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(RhythmVC1.resetDelayed), userInfo: nil, repeats: false)
         
         medicationBtn.isHidden = true

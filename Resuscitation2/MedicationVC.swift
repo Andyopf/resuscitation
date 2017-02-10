@@ -10,39 +10,51 @@ import UIKit
 
 class MedicationVC: UIViewController {
     
-    var now = NSDate()
-    var showDatePattern = DateFormatter()
+//    var now = NSDate()
+//    var showDatePattern = DateFormatter()
     var convertedDate: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
-        convertedDate = showDatePattern.string(from: now as Date)
+//        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
+//        convertedDate = showDatePattern.string(from: now as Date)
         
     }
     
+    func dateEvent3() {
+        var now = NSDate()
+        var showDatePattern = DateFormatter()
+        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
+        convertedDate = showDatePattern.string(from: now as Date)
+    }
+    
     @IBAction func calciumGluconateAdministered(_ sender: Any) {
+        dateEvent3()
         let post = Post(drugPath: "10% CaGluconate 10 ml", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
     }
     
     @IBAction func sodiumBicarbAdministered(_ sender: Any) {
+        dateEvent3()
         let post = Post(drugPath: "7.5% NaHCO3 50 ml", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
     }
     
     @IBAction func insulinAdministered(_ sender: Any) {
+        dateEvent3()
         let post = Post(drugPath: "RI 10 units", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
     }
     
     @IBAction func glucoseAdministered(_ sender: Any) {
+        dateEvent3()
         let post = Post(drugPath: "50% glucose 50 ml", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
     }
     
     @IBAction func adrenalineInjPressed(_ sender: Any) {
+        dateEvent3()
         let post = Post(drugPath: "Epinephrine 1 mg", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
     }

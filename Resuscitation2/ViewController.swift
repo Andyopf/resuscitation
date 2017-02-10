@@ -17,8 +17,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var historyBtn: BigButton!
     
     var countertime = 0
-    var now = NSDate()
-    var showDatePattern = DateFormatter()
+//    var now = NSDate()
+//    var showDatePattern = DateFormatter()
     var convertedDate: String = ""
     
     let locationManager = CLLocationManager()
@@ -30,11 +30,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         super.viewDidLoad()
         
         countertime = 0
-        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
-        convertedDate = showDatePattern.string(from: now as Date)
+        
         locationAuthStatus()
         
         
+    }
+    
+    func dateEvent() {
+        var now = NSDate()
+        var showDatePattern = DateFormatter()
+        showDatePattern.dateFormat = "dd-MM-yy;HH:mm:ss"
+        convertedDate = showDatePattern.string(from: now as Date)
     }
     
     func startCPR() {
@@ -76,6 +82,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func cardiacArrestPressed(_ sender: Any) {
         
         startCPR()
+        dateEvent()
         self.performSegue(withIdentifier: "cardiacArrest", sender: nil)
         let post1 = Post(drugPath: "Cardiac arrest", timePath: convertedDate)
         DataService.instance.addPosts(post: post1)
