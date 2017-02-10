@@ -208,6 +208,7 @@ class VFpVT: UIViewController {
         CPRBtn.isHidden = true
         defibrillationBtn.isHidden = true
         reverseBtn.isHidden = true
+        ecgDisappear()
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(VFpVT.resetDelayed), userInfo: nil, repeats: false)
         
     }

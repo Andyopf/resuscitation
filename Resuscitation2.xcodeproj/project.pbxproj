@@ -12,7 +12,6 @@
 		622FDC111E4A429000E7BC28 /* RhythmVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622FDC101E4A429000E7BC28 /* RhythmVC1.swift */; };
 		62B260351E292097007BA6D2 /* 100bpm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62B260341E292097007BA6D2 /* 100bpm.mp3 */; };
 		62CEB98B1E4B740400128FD5 /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEB98A1E4B740400128FD5 /* MedicationVC.swift */; };
-		62CEB98D1E4C394400128FD5 /* AsystolePEAVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEB98C1E4C394400128FD5 /* AsystolePEAVC.swift */; };
 		62F38D6A1E28DC4E00B7F77C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F38D691E28DC4E00B7F77C /* AppDelegate.swift */; };
 		62F38D6C1E28DC4E00B7F77C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F38D6B1E28DC4E00B7F77C /* ViewController.swift */; };
 		62F38D6F1E28DC4E00B7F77C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F38D6D1E28DC4E00B7F77C /* Main.storyboard */; };
@@ -43,7 +42,6 @@
 		622FDC101E4A429000E7BC28 /* RhythmVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmVC1.swift; sourceTree = "<group>"; };
 		62B260341E292097007BA6D2 /* 100bpm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 100bpm.mp3; sourceTree = "<group>"; };
 		62CEB98A1E4B740400128FD5 /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
-		62CEB98C1E4C394400128FD5 /* AsystolePEAVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsystolePEAVC.swift; sourceTree = "<group>"; };
 		62F38D661E28DC4E00B7F77C /* Resuscitation2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resuscitation2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F38D691E28DC4E00B7F77C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F38D6B1E28DC4E00B7F77C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				62F38D6B1E28DC4E00B7F77C /* ViewController.swift */,
 				622FDC101E4A429000E7BC28 /* RhythmVC1.swift */,
 				622FDC0E1E4A1D2F00E7BC28 /* VFpVT.swift */,
-				62CEB98C1E4C394400128FD5 /* AsystolePEAVC.swift */,
 				62F38D8D1E28DEB500B7F77C /* SummaryView.swift */,
 				62F38D951E28E03A00B7F77C /* PostCell.swift */,
 				62F38DA61E28F97800B7F77C /* ReversibleCauseVC.swift */,
@@ -334,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F38D6C1E28DC4E00B7F77C /* ViewController.swift in Sources */,
-				62CEB98D1E4C394400128FD5 /* AsystolePEAVC.swift in Sources */,
 				62F38D941E28DF6F00B7F77C /* Label.swift in Sources */,
 				62F38D6A1E28DC4E00B7F77C /* AppDelegate.swift in Sources */,
 				62CEB98B1E4B740400128FD5 /* MedicationVC.swift in Sources */,

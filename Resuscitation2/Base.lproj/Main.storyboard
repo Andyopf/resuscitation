@@ -221,16 +221,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Vm-wo-rl8">
-                                                    <rect key="frame" x="8" y="11" width="304" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="304" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVG-cc-XYs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="152" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="152" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0E-gJ-ZQ3">
-                                                            <rect key="frame" x="152" y="0.0" width="152" height="21"/>
+                                                            <rect key="frame" x="152" y="0.0" width="152" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -551,7 +551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxd-Of-BdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2348" y="-592"/>
+            <point key="canvasLocation" x="2393" y="-325"/>
         </scene>
         <!--RhythmVC1-->
         <scene sceneID="y2G-5X-PkR">
@@ -658,17 +658,13 @@
                                     <action selector="startCPRPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="r9a-1h-rkv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g53-lz-D1e">
-                                <rect key="frame" x="16" y="342" width="288" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-GS-GYf">
-                                <rect key="frame" x="50" y="265" width="221" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-GS-GYf" customClass="BigButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="60" y="133" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.52813042529999998" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6Cc-ig-GXn"/>
+                                    <constraint firstAttribute="width" constant="200" id="qg1-GZ-9VB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
@@ -749,14 +745,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bmo-GS-GYf" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="0P2-M1-BLr"/>
                             <constraint firstItem="hAH-zw-a3T" firstAttribute="top" secondItem="X4j-mJ-c8u" secondAttribute="top" id="1vm-ta-GRs"/>
-                            <constraint firstItem="NR5-qu-JY7" firstAttribute="top" secondItem="qiX-fs-bSJ" secondAttribute="bottom" constant="15" id="76y-cS-oyg"/>
                             <constraint firstItem="hAH-zw-a3T" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leading" id="7DI-WB-gUT"/>
                             <constraint firstItem="3Kc-Za-LTf" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leading" constant="15" id="7EF-lQ-uBr"/>
+                            <constraint firstItem="bmo-GS-GYf" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="49" id="FJK-di-UzF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jLB-d5-2co" secondAttribute="trailing" id="GGM-U5-hkK"/>
                             <constraint firstItem="qiX-fs-bSJ" firstAttribute="trailing" secondItem="X4j-mJ-c8u" secondAttribute="trailingMargin" constant="16" id="Hu7-cZ-6rm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hy6-dF-TnD" secondAttribute="trailing" id="J4U-QN-aEp"/>
-                            <constraint firstItem="nd8-gb-9GQ" firstAttribute="top" secondItem="NR5-qu-JY7" secondAttribute="bottom" constant="36" id="WAv-In-32m"/>
+                            <constraint firstItem="NR5-qu-JY7" firstAttribute="top" secondItem="3Kc-Za-LTf" secondAttribute="bottom" constant="15" id="S6s-uy-gxE"/>
                             <constraint firstAttribute="trailing" secondItem="qiX-fs-bSJ" secondAttribute="trailing" id="XW4-9I-ddx"/>
                             <constraint firstItem="3Kc-Za-LTf" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="7" id="bEc-vZ-rfA"/>
                             <constraint firstItem="qiX-fs-bSJ" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="7" id="d51-8A-1QN"/>
@@ -771,7 +768,6 @@
                         <outlet property="CPRTimer" destination="f8b-G9-iWM" id="IgJ-iI-woo"/>
                         <outlet property="amiodaroneBtn" destination="jLB-d5-2co" id="Als-R7-sxc"/>
                         <outlet property="asystoleBtn" destination="heD-vB-nid" id="jg2-yX-bPQ"/>
-                        <outlet property="checkRhythmLbl" destination="g53-lz-D1e" id="7S5-7j-PAD"/>
                         <outlet property="cprBtn" destination="NR5-qu-JY7" id="Mkr-fs-eGn"/>
                         <outlet property="defibrillationBtn" destination="c3k-9G-E2p" id="jg2-Af-RnF"/>
                         <outlet property="epinephrineBtn" destination="5n1-Ei-bTL" id="ZBi-Ka-gyP"/>
@@ -788,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULi-4M-hJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="-20"/>
+            <point key="canvasLocation" x="1158.75" y="-20.070422535211268"/>
         </scene>
     </scenes>
     <resources>

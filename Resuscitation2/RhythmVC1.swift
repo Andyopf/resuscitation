@@ -14,7 +14,7 @@ import AVFoundation
 class RhythmVC1: UIViewController {
     
 
-    @IBOutlet weak var checkRhythmLbl: UILabel!
+//    @IBOutlet weak var checkRhythmLbl: UILabel!
     @IBOutlet weak var CPRTimer: UILabel!
     @IBOutlet weak var twoMinsLbl: UILabel!
     @IBOutlet weak var intervalLbl: UILabel!
@@ -33,17 +33,16 @@ class RhythmVC1: UIViewController {
     @IBOutlet weak var asystoleBtn: UIButton!
     @IBOutlet weak var peaBtn: UIButton!
     
-    var CPRTime = 1234
-    var cprInterval = 10
+    var CPRTime = 0
+    var cprInterval = 20
     var now = NSDate()
     var showDatePattern = DateFormatter()
     var convertedDate: String = ""
     var timer1: Timer!
     var timer2: Timer!
     var timer3: Timer!
-    var numberOfCPR = 0
+    var setCPR = 0
     var countAmio = 0
-    var timeOfVT = 0
     
     var backgroundMusicPlayer: AVAudioPlayer!
     
@@ -56,7 +55,6 @@ class RhythmVC1: UIViewController {
         playMetronome()
         resetBtn.isHidden = true
         defibrillationBtn.isHidden = true
-        checkRhythmLbl.isHidden = true
         cprBtn.isHidden = true
         
     }
@@ -100,9 +98,10 @@ class RhythmVC1: UIViewController {
         if cprInterval > 0 {
             cprInterval -= 1
         } else if cprInterval == 0 {
-            checkRhythmLbl.isHidden = false
-            _ = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(RhythmVC1.checkEcg), userInfo: nil, repeats: false)
+            
+            timer2.invalidate()
             cprInterval = 10
+//            rhythmCheck()
             ecgAppear()
             epinephrineBtn.isHidden = true
             defibrillationBtn.isHidden = true
@@ -127,23 +126,25 @@ class RhythmVC1: UIViewController {
         vfBtn.isHidden = true
     }
     
-    func checkEcg() {
-        checkRhythmLbl.isHidden = true
-    }
+//    func rhythmCheck() {
+//        checkRhythmLbl.isHidden = false
+//        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RhythmVC1.checkEcg), userInfo: nil, repeats: false)
+//    }
+//    
+//    func checkEcg() {
+//        checkRhythmLbl.isHidden = true
+//    }
     
     func toSummary() {
         self.performSegue(withIdentifier: "ToSummary", sender: nil)
     }
     
     func sequenceDefib() {
-        if timeOfVT == 1 {
-            // cpr only
-        } else if timeOfVT == 2 {
+        if setCPR == 2 {
             epinephrineBtn.isHidden = false
-        } else if timeOfVT > 2 {
+        } else if setCPR > 2 {
             epinephrineBtn.isHidden = false
             amiodaroneBtn.isHidden = false
-            // give amiodarone and epinephrine
         }
     }
     
@@ -192,12 +193,14 @@ class RhythmVC1: UIViewController {
     // CPR buttons
     
     @IBAction func startCPRPressed(_ sender: Any) {
+        
         cprCountDown()
         cprBtn.isHidden = true
-        if numberOfCPR == 0 {
+        setCPR += 1
+        if setCPR == 0 {
             let post = Post(drugPath: "Start CPR", timePath: convertedDate)
             DataService.instance.addPosts(post: post)
-            numberOfCPR += 1
+            setCPR += 1
         } else {
             let post = Post(drugPath: "CPR", timePath: convertedDate)
             DataService.instance.addPosts(post: post)
@@ -208,7 +211,6 @@ class RhythmVC1: UIViewController {
         defibrillationBtn.isHidden = true
         let post = Post(drugPath: "defibrillation", timePath: convertedDate)
         DataService.instance.addPosts(post: post)
-        timeOfVT += 1
         sequenceDefib()
         
     }
@@ -246,7 +248,6 @@ class RhythmVC1: UIViewController {
         ecgDisappear()
         twoMinsLbl.isHidden = true
         intervalLbl.isHidden = true
-        
         
         backgroundMusicPlayer.stop()
         

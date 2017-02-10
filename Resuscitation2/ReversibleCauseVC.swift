@@ -24,35 +24,8 @@ class ReversibleCauseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        greyBtn()
         
     }
-    
-//    func greyBtn() {
-//        hypothermiaBtn.layer.backgroundColor = greyColor
-//        hypoxiaBtn.layer.backgroundColor = greyColor
-//        hypovolemiaBtn.layer.backgroundColor = greyColor
-//        acidosisBtn.layer.backgroundColor = greyColor
-//        hypokalemiaBtn.layer.backgroundColor = greyColor
-//        tensionPneuBtn.layer.backgroundColor = greyColor
-//        tamponadeBtn.layer.backgroundColor = greyColor
-//        toxinBtn.layer.backgroundColor = greyColor
-//        pulmEmboBtn.layer.backgroundColor = greyColor
-//        myoInfarctBtn.layer.backgroundColor = greyColor
-//    }
-    //
-    //    func redBtn() {
-    //        hypothermiaBtn.layer.backgroundColor = redColor
-    //        hypoxiaBtn.layer.backgroundColor = redColor
-    //        hypovolemiaBtn.layer.backgroundColor = redColor
-    //        acidosisBtn.layer.backgroundColor = redColor
-    //        hypokalemiaBtn.layer.backgroundColor = redColor
-    //        tensionPneuBtn.layer.backgroundColor = redColor
-    //        tamponadeBtn.layer.backgroundColor = redColor
-    //        toxinBtn.layer.backgroundColor = redColor
-    //        pulmEmboBtn.layer.backgroundColor = redColor
-    //        myoInfarctBtn.layer.backgroundColor = redColor
-    //    }
     
     
     @IBAction func backPressed(_ sender: Any) {
