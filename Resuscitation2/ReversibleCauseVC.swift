@@ -23,8 +23,90 @@ class ReversibleCauseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        number1()
+        number2()
+        number3()
+        number4()
+        number5()
+        number6()
+        number7()
+        number8()
+        number9()
+        number10()
         
-        
+    }
+    
+    func number1() {
+        if hypoxiaBtn.layer.backgroundColor == greyColor {
+            hypoxiaBtn.layer.backgroundColor = redColor
+        } else {
+            hypoxiaBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number2() {
+        if hypovolemiaBtn.layer.backgroundColor == greyColor {
+            hypovolemiaBtn.layer.backgroundColor = redColor
+        } else {
+            hypovolemiaBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number3() {
+        if hypokalemiaBtn.layer.backgroundColor == greyColor {
+            hypokalemiaBtn.layer.backgroundColor = redColor
+        } else {
+            hypokalemiaBtn.layer.backgroundColor = greyColor
+        }
+
+    }
+    func number4() {
+        if acidosisBtn.layer.backgroundColor == greyColor {
+            acidosisBtn.layer.backgroundColor = redColor
+        } else {
+            acidosisBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number5() {
+        if hypothermiaBtn.layer.backgroundColor == greyColor {
+            hypothermiaBtn.layer.backgroundColor = redColor
+        } else {
+            hypothermiaBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number6() {
+        if tensionPneuBtn.layer.backgroundColor == greyColor {
+            tensionPneuBtn.layer.backgroundColor = redColor
+        } else {
+            tensionPneuBtn.layer.backgroundColor = greyColor
+        }
+
+    }
+    func number7() {
+        if toxinBtn.layer.backgroundColor == greyColor {
+            toxinBtn.layer.backgroundColor = redColor
+        } else {
+            toxinBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number8() {
+        if tamponadeBtn.layer.backgroundColor == greyColor {
+            tamponadeBtn.layer.backgroundColor = redColor
+        } else {
+            tamponadeBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number9() {
+        if pulmEmboBtn.layer.backgroundColor == greyColor {
+            pulmEmboBtn.layer.backgroundColor = redColor
+        } else {
+            pulmEmboBtn.layer.backgroundColor = greyColor
+        }
+    }
+    func number10() {
+        if myoInfarctBtn.layer.backgroundColor == greyColor {
+            myoInfarctBtn.layer.backgroundColor = redColor
+        } else {
+            myoInfarctBtn.layer.backgroundColor = greyColor
+        }
     }
     
     
@@ -33,82 +115,42 @@ class ReversibleCauseVC: UIViewController {
     }
     
     @IBAction func hypoxiaPressed(_ sender: Any) {
-        if hypoxiaBtn.layer.backgroundColor == greyColor {
-            hypoxiaBtn.layer.backgroundColor = redColor
-        } else {
-            hypoxiaBtn.layer.backgroundColor = greyColor
-        }
+        number1()
     }
     
     @IBAction func hypovolemiaPressed(_ sender: Any) {
-        if hypovolemiaBtn.layer.backgroundColor == greyColor {
-            hypovolemiaBtn.layer.backgroundColor = redColor
-        } else {
-            hypovolemiaBtn.layer.backgroundColor = greyColor
-        }
+        number2()
     }
     
     @IBAction func hypokalemiaPressed(_ sender: Any) {
-        if hypokalemiaBtn.layer.backgroundColor == greyColor {
-            hypokalemiaBtn.layer.backgroundColor = redColor
-        } else {
-            hypokalemiaBtn.layer.backgroundColor = greyColor
-        }
+        number3()
     }
     
     @IBAction func acidosisPressed(_ sender: Any) {
-        if acidosisBtn.layer.backgroundColor == greyColor {
-            acidosisBtn.layer.backgroundColor = redColor
-        } else {
-            acidosisBtn.layer.backgroundColor = greyColor
-        }
+        number4()
     }
     
     @IBAction func hypothermiaBtnPressed(_ sender: Any) {
-        if hypothermiaBtn.layer.backgroundColor == greyColor {
-            hypothermiaBtn.layer.backgroundColor = redColor
-        } else {
-            hypothermiaBtn.layer.backgroundColor = greyColor
-        }
+        number5()
     }
     
     @IBAction func toxinPressed(_ sender: Any) {
-        if toxinBtn.layer.backgroundColor == greyColor {
-            toxinBtn.layer.backgroundColor = redColor
-        } else {
-            toxinBtn.layer.backgroundColor = greyColor
-        }
+        number6()
     }
     
     @IBAction func tensionPressed(_ sender: Any) {
-        if tensionPneuBtn.layer.backgroundColor == greyColor {
-            tensionPneuBtn.layer.backgroundColor = redColor
-        } else {
-            tensionPneuBtn.layer.backgroundColor = greyColor
-        }
+        number7()
     }
     
     @IBAction func tamponadePressed(_ sender: Any) {
-        if tamponadeBtn.layer.backgroundColor == greyColor {
-            tamponadeBtn.layer.backgroundColor = redColor
-        } else {
-            tamponadeBtn.layer.backgroundColor = greyColor
-        }
+        number8()
     }
     
     @IBAction func pulmoEmPressed(_ sender: Any) {
-        if pulmEmboBtn.layer.backgroundColor == greyColor {
-            pulmEmboBtn.layer.backgroundColor = redColor
-        } else {
-            pulmEmboBtn.layer.backgroundColor = greyColor
-        }
+        number9()
     }
     
     @IBAction func miPressed(_ sender: Any) {
-        if myoInfarctBtn.layer.backgroundColor == greyColor {
-            myoInfarctBtn.layer.backgroundColor = redColor
-        } else {
-            myoInfarctBtn.layer.backgroundColor = greyColor
-        }
+        number10()
     }
 }

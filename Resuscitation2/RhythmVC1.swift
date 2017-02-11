@@ -50,6 +50,9 @@ class RhythmVC1: UIViewController {
         resetBtn.isHidden = true
         defibrillationBtn.isHidden = true
         cprBtn.isHidden = true
+        reverseBtn.isHidden = true
+        epinephrineBtn.isHidden = true
+        amiodaroneBtn.isHidden = true
         
     }
     
@@ -118,6 +121,7 @@ class RhythmVC1: UIViewController {
         asystoleBtn.isHidden = false
         pvtBtn.isHidden = false
         vfBtn.isHidden = false
+        reverseBtn.isHidden = true
     }
     
     func ecgDisappear() {
@@ -125,6 +129,7 @@ class RhythmVC1: UIViewController {
         asystoleBtn.isHidden = true
         pvtBtn.isHidden = true
         vfBtn.isHidden = true
+        reverseBtn.isHidden = false
     }
     
     func toSummary() {
@@ -243,13 +248,13 @@ class RhythmVC1: UIViewController {
         
         cprBtn.isHidden = true
         defibrillationBtn.isHidden = true
-        reverseBtn.isHidden = true
         amiodaroneBtn.isHidden = true
         epinephrineBtn.isHidden = true
         timer3 = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(RhythmVC1.resetDelayed), userInfo: nil, repeats: false)
         
         medicationBtn.isHidden = true
         ecgDisappear()
+        reverseBtn.isHidden = true
         twoMinsLbl.isHidden = true
         intervalLbl.isHidden = true
         

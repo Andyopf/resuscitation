@@ -639,7 +639,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-dF-TnD">
-                                        <rect key="frame" x="0.0" y="33" width="288" height="219"/>
+                                        <rect key="frame" x="0.0" y="33" width="288" height="213"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-kM-qU1" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
@@ -653,7 +653,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-7H-aHQ" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="59" width="288" height="42"/>
+                                                <rect key="frame" x="0.0" y="57" width="288" height="42"/>
                                                 <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Pulseless VT">
@@ -664,7 +664,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heD-vB-nid" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="118" width="288" height="42"/>
+                                                <rect key="frame" x="0.0" y="114" width="288" height="42"/>
                                                 <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Asystole">
@@ -675,7 +675,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-9E-a7O" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="177" width="288" height="42"/>
+                                                <rect key="frame" x="0.0" y="171" width="288" height="42"/>
                                                 <color key="backgroundColor" red="0.051864723729999999" green="0.65350477429999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="PEA">
@@ -687,25 +687,11 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vvp-kI-64d">
-                                        <rect key="frame" x="0.0" y="256" width="288" height="39"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-TY-3f3" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
-                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Reversible Causes"/>
-                                                <connections>
-                                                    <segue destination="44m-h2-lWF" kind="show" id="X8J-J4-Zbh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="C38-fs-c2g">
-                                        <rect key="frame" x="0.0" y="299" width="288" height="39"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C38-fs-c2g">
+                                        <rect key="frame" x="0.0" y="250" width="288" height="88"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n1-Ei-bTL">
-                                                <rect key="frame" x="0.0" y="0.0" width="124" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="EPI"/>
                                                 <connections>
@@ -713,7 +699,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-d5-2co">
-                                                <rect key="frame" x="164" y="0.0" width="124" height="39"/>
+                                                <rect key="frame" x="0.0" y="49" width="288" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="AMIO"/>
                                                 <connections>
@@ -729,9 +715,7 @@
                                     <constraint firstAttribute="trailing" secondItem="hy6-dF-TnD" secondAttribute="trailing" id="U7u-as-j05"/>
                                     <constraint firstItem="C4U-ea-B20" firstAttribute="leading" secondItem="YTF-wE-hqe" secondAttribute="leading" id="cDS-TG-Jic"/>
                                     <constraint firstAttribute="trailing" secondItem="C4U-ea-B20" secondAttribute="trailing" id="r5f-oy-DN0"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vvp-kI-64d" secondAttribute="trailing" id="rAk-j9-qMX"/>
                                     <constraint firstAttribute="trailing" secondItem="C38-fs-c2g" secondAttribute="trailing" id="rJy-qO-f6H"/>
-                                    <constraint firstItem="Vvp-kI-64d" firstAttribute="leading" secondItem="YTF-wE-hqe" secondAttribute="leading" id="uyy-Oo-WRH"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-GS-GYf" customClass="BigButton" customModule="Resuscitation2" customModuleProvider="target">
@@ -761,6 +745,18 @@
                                     <action selector="defibrillationPressed:" destination="WFf-fd-SO0" eventType="touchUpInside" id="nOC-CM-QGa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-TY-3f3" customClass="SmallButton" customModule="Resuscitation2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="272" width="288" height="45"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="925-0j-IBk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Reversible Causes"/>
+                                <connections>
+                                    <segue destination="44m-h2-lWF" kind="show" id="X8J-J4-Zbh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR5-qu-JY7">
                                 <rect key="frame" x="65" y="150" width="190" height="190"/>
                                 <constraints>
@@ -782,7 +778,9 @@
                             <constraint firstItem="NR5-qu-JY7" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="66" id="Pf5-mG-gEi"/>
                             <constraint firstItem="nd8-gb-9GQ" firstAttribute="top" secondItem="nU6-Ic-qmf" secondAttribute="bottom" constant="8" id="TNg-gB-VLS"/>
                             <constraint firstItem="YTF-wE-hqe" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="UWX-2U-wR0"/>
+                            <constraint firstItem="c3k-9G-E2p" firstAttribute="top" secondItem="4lC-TY-3f3" secondAttribute="bottom" constant="30" id="ZTC-Wx-G3E"/>
                             <constraint firstItem="c3k-9G-E2p" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="enP-27-ei7"/>
+                            <constraint firstItem="4lC-TY-3f3" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="fsL-C7-fLC"/>
                             <constraint firstItem="nd8-gb-9GQ" firstAttribute="top" secondItem="Yyy-kx-HXk" secondAttribute="bottom" constant="8" id="gEt-1s-k5z"/>
                             <constraint firstAttribute="trailing" secondItem="hAH-zw-a3T" secondAttribute="trailing" id="h9r-eq-Kr9"/>
                             <constraint firstItem="bmo-GS-GYf" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="ioG-sH-UJ1"/>
@@ -791,6 +789,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="YTF-wE-hqe" secondAttribute="trailing" id="oxN-oe-M1D"/>
                             <constraint firstItem="bmo-GS-GYf" firstAttribute="top" secondItem="hAH-zw-a3T" secondAttribute="bottom" constant="49" id="sH7-Uq-8z9"/>
                             <constraint firstItem="Yyy-kx-HXk" firstAttribute="leading" secondItem="X4j-mJ-c8u" secondAttribute="leadingMargin" id="vXp-xj-zgQ"/>
+                            <constraint firstItem="4lC-TY-3f3" firstAttribute="trailing" secondItem="X4j-mJ-c8u" secondAttribute="trailingMargin" id="wZp-X1-hMz"/>
                             <constraint firstItem="NR5-qu-JY7" firstAttribute="centerX" secondItem="X4j-mJ-c8u" secondAttribute="centerX" id="xFM-iF-wL9"/>
                         </constraints>
                     </view>

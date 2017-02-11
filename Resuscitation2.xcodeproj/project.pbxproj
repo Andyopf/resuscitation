@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2EA998AC0D6721993FFAEFA8 /* Pods_Resuscitation2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A272E477EFB917A68D6F42AD /* Pods_Resuscitation2.framework */; };
-		622FDC0F1E4A1D2F00E7BC28 /* VFpVT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622FDC0E1E4A1D2F00E7BC28 /* VFpVT.swift */; };
 		622FDC111E4A429000E7BC28 /* RhythmVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622FDC101E4A429000E7BC28 /* RhythmVC1.swift */; };
 		62B260351E292097007BA6D2 /* 100bpm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62B260341E292097007BA6D2 /* 100bpm.mp3 */; };
 		62CEB98B1E4B740400128FD5 /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEB98A1E4B740400128FD5 /* MedicationVC.swift */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		033CB805B6AC2E100867E3B6 /* Pods-Resuscitation2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resuscitation2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resuscitation2/Pods-Resuscitation2.release.xcconfig"; sourceTree = "<group>"; };
-		622FDC0E1E4A1D2F00E7BC28 /* VFpVT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFpVT.swift; sourceTree = "<group>"; };
 		622FDC101E4A429000E7BC28 /* RhythmVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmVC1.swift; sourceTree = "<group>"; };
 		62B260341E292097007BA6D2 /* 100bpm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 100bpm.mp3; sourceTree = "<group>"; };
 		62CEB98A1E4B740400128FD5 /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			children = (
 				62F38D6B1E28DC4E00B7F77C /* ViewController.swift */,
 				622FDC101E4A429000E7BC28 /* RhythmVC1.swift */,
-				622FDC0E1E4A1D2F00E7BC28 /* VFpVT.swift */,
 				62F38D8D1E28DEB500B7F77C /* SummaryView.swift */,
 				62F38D951E28E03A00B7F77C /* PostCell.swift */,
 				62F38DA61E28F97800B7F77C /* ReversibleCauseVC.swift */,
@@ -341,7 +338,6 @@
 				62F38D961E28E03A00B7F77C /* PostCell.swift in Sources */,
 				62F38D831E28DCF700B7F77C /* Constant.swift in Sources */,
 				622FDC111E4A429000E7BC28 /* RhythmVC1.swift in Sources */,
-				622FDC0F1E4A1D2F00E7BC28 /* VFpVT.swift in Sources */,
 				62F38DA71E28F97800B7F77C /* ReversibleCauseVC.swift in Sources */,
 				62F38D901E28DF2F00B7F77C /* BigButton.swift in Sources */,
 				62F38D8E1E28DEB500B7F77C /* SummaryView.swift in Sources */,
